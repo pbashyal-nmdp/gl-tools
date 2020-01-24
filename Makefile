@@ -100,21 +100,3 @@ activate: ## activate a virtual environment. Run `make venv` before activating.
 	@echo "To activate the new virtualenv, execute the following from your shell"
 	@echo "source $(PWD)/venv/bin/activate"
 
-git-init: ## initializes a git repository. Commits and pushes to github.
-	@echo "====================================================================="
-	@echo "Make sure you've created a github repo 'pbashyal-nmdp/gltools'"
-	@read -p "Continue? [Y/N] " choice; \
-	case "$$choice" in \
-		y | Y ) \
-			echo "====================================================================="; \
-			git init . ; \
-			git add . ; \
-			git commit -m "Initial Import" ; \
-			git remote add origin https://github.com/pbashyal-nmdp/gltools ; \
-			git push -u origin master; \
-			echo "====================================================================="; \
-			echo "Git Initialized!" \
-			;; \
-	  * ) echo "Git NOT initialized!" ;; \
-	esac; 
-
