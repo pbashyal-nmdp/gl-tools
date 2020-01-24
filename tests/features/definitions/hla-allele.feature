@@ -6,16 +6,14 @@ Feature: Define Allele
 
     Scenario Outline: Test Valid HLA Allele Names
 
-        Given the allele name is <Allele>
+        Given the allele name is <Allele Name>
         When I ask if it's an allele name
-        Then the allele should be a <valid> allele name
+        Then the allele should be a <Valid> allele name
 
         Examples: Valid Examples
             | Allele Name | Valid |
             | HLA-A*01:01 | True  |
             | DPBA*07:02  | True  |
-            | 😄          | True  |
-            | a1          | True  |
 
         Examples: Invalid Examples
             | Allele Name | Valid |
