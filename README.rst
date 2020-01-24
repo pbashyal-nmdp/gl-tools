@@ -18,6 +18,24 @@ GL String Tools
 
 Tools for GL String
 
+Install for development
+-----------------------
+
+.. code-block::
+  
+  python3 -m venv venv
+  source venv/bin/activate
+
+  pip install -r requirements_dev.txt
+
+
+Run Behave
+-----------------------
+
+.. code-block::
+  
+  behave
+
 
 * Free software: LGPL 3.0
 * Documentation: https://gltools.readthedocs.io.
